@@ -5,7 +5,7 @@ yolo_model:
   weight_file:
     name: yolov2-tiny-emoji_40000.weights
   threshold:
-    value: 0.9
+    value: 0.7
   detection_classes:
     names:
       - monkey
