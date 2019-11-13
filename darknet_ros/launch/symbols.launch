@@ -2,7 +2,7 @@
 
 <launch>
   <!-- Namespace -->
-  <arg name="namespace" default="darknet_ros" />
+  <arg name="namespace" default="Sauron" />
 
   <!-- Console launch prefix -->
   <arg name="launch_prefix" default=""/>
@@ -13,7 +13,7 @@
 
   <!-- ROS and network parameter files -->
   <arg name="ros_param_file"             default="$(find darknet_ros)/config/ros_lm.yaml"/>
-  <arg name="network_param_file"         default="$(find darknet_ros)/config/yolov2-tiny-emojis.yaml"/>
+  <arg name="network_param_file"         default="$(find darknet_ros)/config/yolov2-tiny-symbols.yaml"/>
 
   <!-- Load parameters -->
   <rosparam command="load" ns="darknet_ros" file="$(arg ros_param_file)"/>
@@ -27,5 +27,5 @@
     <param name="namespace"             value="$(arg namespace)"/>
   </node>
 
- <!--<node name="republish" type="republish" pkg="image_transport" output="screen" 	args="compressed in:=/front_camera/image_raw raw out:=/camera/image_raw" /> -->
+ <node name="republish" type="republish" pkg="image_transport" output="screen" 	args="compressed in:=/Sauron/camera/color/image_raw raw out:=/Sauron/camera/image_raw" /> 
 </launch>

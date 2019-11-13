@@ -1,0 +1,13 @@
+yolo_model:
+
+  config_file:
+    name: yolo-obj.cfg
+  weight_file:
+    name: yolo-obj_80000.weights
+  threshold:
+    value: 0.7
+  detection_classes:
+    names:
+      - insignia
+      - fuel
+      - danger
